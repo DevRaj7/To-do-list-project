@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://kit.fontawesome.com/55f2239c37.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box box1">
+        <h1>Todo List</h1>
+
+    </div>
+    <div class="box box2">
+     <%   for(var i=0;i<ejes.length; i++){ %>
+            <div class ="item">
+                <input type="checkbox">
+                <p><%= ejes[i] %> </p>
+            </div>
+        
+      <%  } %>
+        <form action="/" method ="POST">
+        <input type="text" name="ele1" placeholder="Enter the Task">
+        <button type="submit"><i class="fa-solid fa-calendar-plus"></i></button>
+    </form>
+    </div>
+</body>
+</html>

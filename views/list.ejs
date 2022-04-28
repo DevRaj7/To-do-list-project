@@ -14,13 +14,15 @@
 
     </div>
     <div class="box box2">
-     <%   for(var i=0;i<ejes.length; i++){ %>
+     <%   ejes.forEach(function(items){ %>
+        <form action="/delete" method="POST">
             <div class ="item">
-                <input type="checkbox">
-                <p><%= ejes[i] %> </p>
+                <input type="checkbox" name="checkbox1" onchange="this.form.submit()" value="<%= items._id %>">
+                <p><%= items.name %> </p>
             </div>
-        
-      <%  } %>
+        </form>
+      <%  });  %>
+     
         <form action="/" method ="POST">
         <input type="text" name="ele1" placeholder="Enter the Task">
         <button type="submit"><i class="fa-solid fa-calendar-plus"></i></button>
